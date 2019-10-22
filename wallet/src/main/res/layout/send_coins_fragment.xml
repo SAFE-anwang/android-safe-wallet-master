@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        tools:ignore="RequiredSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="16dp">
+
+    <LinearLayout
+            android:id="@+id/send_coins_payee_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/list_entry_padding_horizontal_lax"
+                android:layout_marginRight="@dimen/list_entry_padding_horizontal_lax"
+                android:text="@string/send_coins_fragment_receiving_address_label"
+                android:textSize="@dimen/font_size_small"
+                android:textStyle="bold"/>
+
+        <TextView
+                android:id="@+id/send_coins_payee_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/list_entry_padding_horizontal_lax"
+                android:layout_marginRight="@dimen/list_entry_padding_horizontal_lax"
+                android:layout_marginTop="8dp"
+                android:singleLine="true"/>
+
+        <TextView
+                android:id="@+id/send_coins_payee_verified_by"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/list_entry_padding_horizontal_lax"
+                android:layout_marginRight="@dimen/list_entry_padding_horizontal_lax"
+                android:singleLine="true"
+                android:textColor="@color/fg_less_significant"
+                android:textSize="@dimen/font_size_small"/>
+
+        <AutoCompleteTextView
+                android:id="@+id/send_coins_receiving_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/list_entry_padding_horizontal"
+                android:layout_marginRight="@dimen/list_entry_padding_horizontal"
+                android:completionThreshold="1"
+                android:hint="@string/send_coins_fragment_receiving_address_hint"
+                android:imeOptions="flagNoExtractUi"
+                android:singleLine="true"
+                android:maxLength="64"
+            />
+
+        <LinearLayout
+                android:id="@+id/send_coins_receiving_static"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/list_entry_padding_horizontal_lax"
+                android:layout_marginRight="@dimen/list_entry_padding_horizontal_lax"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+            <TextView
+                    android:id="@+id/send_coins_receiving_static_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="0.8"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:singleLine="false"
+                    android:textStyle="bold"/>
+
+            <TextView
+                    android:id="@+id/send_coins_receiving_static_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/list_entry_padding_horizontal"/>
+
+            <ImageView
+                    android:id="@+id/send_coins_receiving_satatic_delete"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_clear_red_24dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+                style="@style/My.Primary.Button"
+                android:id="@+id/paste_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="16dp"
+                android:text="@string/safe_paste_address"/>
+
+        <TextView
+                style="@style/My.Primary.Button"
+                android:id="@+id/scan_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="16dp"
+                android:text="@string/safe_scan_address"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/send_coins_amount_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/list_entry_padding_horizontal_lax"
+                android:layout_marginRight="@dimen/list_entry_padding_horizontal_lax"
+                android:text="@string/send_coins_fragment_amount_label"
+                android:textSize="@dimen/font_size_small"
+                android:textStyle="bold"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/list_entry_padding_horizontal"
+                android:layout_marginRight="@dimen/list_entry_padding_horizontal"
+                android:divider="@drawable/divider_currency"
+                android:orientation="horizontal"
+                android:showDividers="middle">
+
+            <de.schildbach.wallet.ui.CurrencyAmountView
+                    android:id="@+id/send_coins_amount_btc"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                <EditText
+                        android:id="@+id/send_coins_amount_btc_edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="flagNoExtractUi"
+                        android:textSize="@dimen/font_size_large"
+                        tools:ignore="TextFields"/>
+            </de.schildbach.wallet.ui.CurrencyAmountView>
+
+            <de.schildbach.wallet.ui.CurrencyAmountView
+                    android:id="@+id/send_coins_amount_local"
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                <EditText
+                        android:id="@+id/send_coins_amount_local_edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="flagNoExtractUi"
+                        android:textSize="@dimen/font_size_large"
+                        tools:ignore="TextFields"/>
+            </de.schildbach.wallet.ui.CurrencyAmountView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="@dimen/list_entry_padding_horizontal"
+            android:layout_marginRight="@dimen/list_entry_padding_horizontal"
+            android:orientation="horizontal">
+
+        <CheckBox
+                android:id="@+id/lock_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/safe_lock"
+                android:textSize="@dimen/font_size_normal"/>
+
+        <LinearLayout
+                android:id="@+id/month_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:gravity="center_vertical">
+
+            <de.schildbach.wallet.util.AddSubEditText
+                    android:id="@+id/month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="@dimen/font_size_normal"
+                    android:textColor="@color/fg_less_significant"
+                    android:text="@string/safe_month"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <CheckBox
+            android:id="@+id/send_coins_direct_payment_enable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/list_entry_padding_horizontal"
+            android:layout_marginRight="@dimen/list_entry_padding_horizontal"
+            android:layout_marginTop="8dp"
+            android:text="@string/send_coins_fragment_direct_payment_enable"/>
+
+
+    <CheckBox
+            android:id="@+id/send_coins_instantx_enable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/list_entry_padding_horizontal"
+            android:layout_marginRight="@dimen/list_entry_padding_horizontal"
+            android:layout_marginTop="8dp"
+            android:text="@string/send_coins_fragment_instantx_enable"
+            android:textSize="@dimen/font_size_normal"/>
+
+    <TextView
+            android:id="@+id/send_coins_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/list_entry_padding_vertical"
+            android:layout_marginLeft="@dimen/list_entry_padding_horizontal_lax"
+            android:layout_marginRight="@dimen/list_entry_padding_horizontal_lax"
+            android:textSize="@dimen/font_size_small"/>
+
+    <LinearLayout
+            android:id="@+id/send_coins_private_key_password_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/list_entry_padding_vertical"
+            android:layout_marginLeft="@dimen/list_entry_padding_horizontal"
+            android:layout_marginRight="@dimen/list_entry_padding_horizontal"
+            android:divider="@drawable/divider_field"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:visibility="gone">
+
+        <EditText
+                android:id="@+id/send_coins_private_key_password"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/private_key_password"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="numberPassword"
+                android:singleLine="true"/>
+
+        <TextView
+                android:id="@+id/send_coins_private_key_bad_password"
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/private_key_bad_password"
+                android:textColor="@color/fg_error"
+                android:textStyle="bold"
+                android:visibility="invisible"/>
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/send_coins_direct_payment_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/list_entry_padding_vertical"
+            android:layout_marginLeft="@dimen/list_entry_padding_horizontal_lax"
+            android:layout_marginRight="@dimen/list_entry_padding_horizontal_lax"
+            android:visibility="gone"/>
+
+    <FrameLayout
+            android:id="@+id/send_coins_sent_transaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutAnimation="@anim/transaction_layout_anim"
+            android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/send_coins_go"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/My.Primary.Button"
+        android:textAllCaps="false"
+        android:textSize="@dimen/font_size_small"
+        android:textColor="@color/white"
+        android:layout_margin="20dp"
+        android:text="@string/send_coins_fragment_button_send"
+        android:textStyle="bold"/>
+
+
+</LinearLayout>

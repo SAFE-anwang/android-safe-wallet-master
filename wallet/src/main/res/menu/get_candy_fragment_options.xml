@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/time_asc"
+        android:title="@string/asc"
+        android:visible="false"
+        app:showAsAction="always|withText" />
+
+    <item
+        android:id="@+id/time_desc"
+        android:title="@string/desc"
+        android:visible="true"
+        app:showAsAction="always|withText" />
+
+</menu>

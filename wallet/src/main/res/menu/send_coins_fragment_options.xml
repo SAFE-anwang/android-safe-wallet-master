@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/send_coins_options_fee_category"
+        android:title="@string/send_coins_options_fee_category"
+        app:showAsAction="always|withText">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/send_coins_options_fee_category_normal"
+                    android:title="@string/send_coins_options_fee_category_normal" />
+                <item
+                    android:id="@+id/send_coins_options_fee_category_priority"
+                    android:title="@string/send_coins_options_fee_category_priority" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

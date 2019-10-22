@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/safe_asset"
+                    android:textColor="@color/fg_less_significant"
+                    android:textSize="@dimen/symbol_size_normal"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2.5"
+                    android:background="@drawable/rect_corner_bg"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/sp_asset_name"
+                        style="@style/My.Widget.NoStyle.Spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:spinnerMode="dialog" />
+
+                    <ImageView
+                        android:id="@+id/img_asset_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_drop_down_black_24dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ctv_total_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="12dp"
+                android:textColor="@color/fg_less_significant"
+                android:textSize="@dimen/font_size_tiny"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/safe_candy_expired"
+                    android:textColor="@color/fg_less_significant"
+                    android:textSize="@dimen/symbol_size_normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="*"
+                    android:textColor="@color/vivid_red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="@dimen/tip_edit_padding_top">
+
+                <de.schildbach.wallet.ui.NullMenuEditText
+                    android:id="@+id/et_candy_expired"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2.5"
+                    android:background="@drawable/rect_corner_bg"
+                    android:digits="123"
+                    android:hint="@string/safe_hint_candy_expired"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:padding="6dp"
+                    android:textColor="@color/fg_less_significant"
+                    android:textColorHint="@color/fg_shortcut"
+                    android:textSize="@dimen/symbol_size_normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="@string/safe_candy_rate2"
+                    android:textColor="@color/fg_less_significant"
+                    android:textSize="@dimen/symbol_size_normal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/ctv_candy_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="@color/fg_less_significant"
+                        android:textSize="@dimen/font_size_tiny" />
+
+                    <de.schildbach.wallet.seekbar.IndicatorSeekBar
+                        android:id="@+id/isb_candy_rate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:isb_max="100"
+                        app:isb_min="1"
+                        app:isb_progress="20"
+                        app:isb_show_indicator="false" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingRight="12dp"
+                        android:paddingTop="6dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/safe_thousand_milli"
+                            android:textColor="@color/fg_less_significant"
+                            android:textSize="@dimen/font_size_tiny" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="@string/safe_hundred_milli"
+                            android:textColor="@color/fg_less_significant"
+                            android:textSize="@dimen/font_size_tiny" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:gravity="top|right"
+                android:text="@string/safe_remarks"
+                android:textColor="@color/fg_less_significant"
+                android:textSize="@dimen/symbol_size_normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="@dimen/tip_edit_padding_top">
+
+                <de.schildbach.wallet.ui.ScrollEditText
+                    android:id="@+id/et_remarks"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2.5"
+                    android:background="@drawable/rect_corner_bg"
+                    android:gravity="top|left"
+                    android:hint="@string/safe_hint_remarks"
+                    android:imeOptions="actionNext"
+                    android:lines="5"
+                    android:maxLength="500"
+                    android:minHeight="80dp"
+                    android:padding="6dp"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/fg_less_significant"
+                    android:textColorHint="@color/fg_shortcut"
+                    android:textSize="@dimen/symbol_size_normal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_grant"
+        style="@style/My.Primary.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/button_blue_no_corners_selector"
+        android:text="@string/safe_grant" />
+
+</LinearLayout>

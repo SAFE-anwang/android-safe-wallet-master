@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/line"
+            android:showDividers="middle"
+            android:orientation="vertical">
+
+        <RelativeLayout
+                android:id="@+id/mine_candy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/safe_candy_record"
+                    android:textSize="17dp"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/safe_mine_candy"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/safe_list_arrow"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/mine_masternode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/safe_masternode_title"
+                    android:textSize="17dp"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/safe_mine_masternode"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/safe_list_arrow"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/mine_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/address_book_activity_title"
+                    android:textSize="17dp"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/safe_mine_address"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/safe_list_arrow"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/mine_network"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/network_monitor_activity_title"
+                    android:textSize="17dp"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/safe_mine_network"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/safe_list_arrow"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/mine_security"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wallet_options_safety_menu"
+                    android:textSize="17dp"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/safe_mine_security"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/safe_list_arrow"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/mine_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_settings"
+                    android:textSize="17dp"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/safe_mine_setting"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/safe_list_arrow"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/mine_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about_title"
+                    android:textSize="17dp"
+                    android:layout_centerVertical="true"
+                    android:drawableLeft="@drawable/safe_mine_about"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/safe_list_arrow"/>
+
+        </RelativeLayout>
+
+
+        <View android:layout_width="match_parent"
+              android:layout_height="10dp" />
+
+    </LinearLayout>
+
+</ScrollView>

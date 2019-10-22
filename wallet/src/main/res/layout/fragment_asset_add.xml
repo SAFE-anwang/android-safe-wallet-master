@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/safe_asset_name"
+                    android:textColor="@color/fg_less_significant"
+                    android:textSize="@dimen/symbol_size_normal"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2.5"
+                    android:background="@drawable/rect_corner_bg"
+                    android:orientation="horizontal"
+                    android:textColor="@color/fg_less_significant"
+                    android:textSize="@dimen/symbol_size_normal">
+
+                    <Spinner
+                        android:id="@+id/sp_asset_name"
+                        style="@style/My.Widget.NoStyle.Spinner"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:spinnerMode="dialog" />
+
+                    <ImageView
+                        android:id="@+id/img_asset_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_arrow_drop_down_black_24dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_enable_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="12dp"
+                android:textColor="@color/fg_less_significant"
+                android:textSize="@dimen/font_size_tiny"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="right"
+                    android:text="@string/safe_add_asset_amount"
+                    android:textColor="@color/fg_less_significant"
+                    android:textSize="@dimen/symbol_size_normal"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="*"
+                    android:textColor="@color/vivid_red" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="@dimen/tip_edit_padding_top">
+
+                <EditText
+                    android:id="@+id/et_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2.5"
+                    android:background="@drawable/rect_corner_bg"
+                    android:hint="@string/safe_hint_max_tips"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:padding="6dp"
+                    android:textColor="@color/fg_less_significant"
+                    android:textColorHint="@color/fg_shortcut"
+                    android:textSize="@dimen/symbol_size_normal" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="top|right"
+                android:text="@string/safe_remarks"
+                android:textColor="@color/fg_less_significant"
+                android:textSize="@dimen/symbol_size_normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="@dimen/tip_edit_padding_top">
+
+                <de.schildbach.wallet.ui.ScrollEditText
+                    android:id="@+id/et_remarks"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2.5"
+                    android:background="@drawable/rect_corner_bg"
+                    android:gravity="top|left"
+                    android:hint="@string/safe_hint_remarks"
+                    android:imeOptions="actionNext"
+                    android:lines="5"
+                    android:maxLength="500"
+                    android:minHeight="80dp"
+                    android:padding="6dp"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/fg_less_significant"
+                    android:textColorHint="@color/fg_shortcut"
+                    android:textSize="@dimen/symbol_size_normal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_issue"
+        style="@style/My.Primary.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/button_blue_no_corners_selector"
+        android:text="@string/safe_issue" />
+
+</LinearLayout>
+

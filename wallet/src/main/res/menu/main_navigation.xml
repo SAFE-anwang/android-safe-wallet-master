@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/navigation_home"
+            android:icon="@drawable/safe_menu_home"
+            android:title="@string/safe_asset_title"/>
+
+    <item
+            android:id="@+id/navigation_issue_asset"
+            android:icon="@drawable/safe_menu_masternode"
+            android:title="@string/safe_issue_asset_manager_title"/>
+
+    <item
+            android:id="@+id/navigation_forum"
+            android:icon="@drawable/safe_menu_forum"
+            android:title="@string/safe_forum_title"/>
+
+    <item
+            android:id="@+id/navigation_mine"
+            android:icon="@drawable/safe_menu_mine"
+            android:title="@string/safe_mine_title"/>
+
+</menu>

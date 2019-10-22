@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_less_bright"
+        android:orientation="vertical">
+
+        <RadioGroup
+                android:id="@+id/address_book_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:showDividers="middle"
+                android:divider="@drawable/v_line">
+
+            <RadioButton
+                    android:id="@+id/mine"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:button="@null"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/address_book_list_receiving_title"
+                    android:background="@drawable/tab_bg_selector"
+                    android:textColor="@drawable/tab_color_selector"
+                    android:textSize="14sp"
+                    android:padding="6dp"/>
+
+            <RadioButton
+                    android:id="@+id/save"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:button="@null"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:checked="true"
+                    android:text="@string/address_book_list_sending_title"
+                    android:background="@drawable/tab_bg_selector"
+                    android:textColor="@drawable/tab_color_selector"
+                    android:textSize="14sp"
+                    android:padding="6dp"/>
+
+        </RadioGroup>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/address_book_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/bg_bright" />
+
+    </LinearLayout>
+
+</LinearLayout>

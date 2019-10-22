@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/sv_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_issue"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:id="@+id/ll_inner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginTop="@dimen/tip_edit_padding_top"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/safe_asset_name"
+                    android:textColor="@color/fg_less_significant"
+                    android:textSize="@dimen/symbol_size_normal" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:text="*"
+                    android:textColor="@color/vivid_red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="@dimen/tip_edit_padding_top">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2.5"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rect_corner_bg">
+
+                        <EditText
+                            android:id="@+id/et_asset_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="@string/safe_hint_asset_name"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:maxLength="20"
+                            android:textColor="@color/fg_less_significant"
+                            android:textSize="@dimen/symbol_size_normal" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_check_exist"
+                        style="@style/My.Primary.Button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/is_exit_tip"
+                        android:textSize="@dimen/font_size_tiny" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/safe_asset_short"
+                    android:textColor="@color/fg_less_significant"
+                    android:textSize="@dimen/symbol_size_normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="*"
+                    android:textColor="@color/vivid_red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="@dimen/tip_edit_padding_top">
+
+                <EditText
+                    android:id="@+id/et_short_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2.5"
+                    android:background="@drawable/rect_corner_bg"
+                    android:hint="@string/safe_hint_short_name"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:padding="6dp"
+                    android:textColor="@color/fg_less_significant"
+                    android:textColorHint="@color/fg_shortcut"
+                    android:textSize="@dimen/symbol_size_normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/safe_asset_unit"
+                    android:textColor="@color/fg_less_significant"
+                    android:textSize="@dimen/symbol_size_normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="*"
+                    android:textColor="@color/vivid_red" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="@dimen/tip_edit_padding_top">
+
+                <EditText
+                    android:id="@+id/et_asset_unit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2.5"
+                    android:background="@drawable/rect_corner_bg"
+                    android:hint="@string/safe_hint_asset_unit"
+                    android:imeOptions="actionNext"
+                    android:padding="6dp"
+                    android:textColor="@color/fg_less_significant"
+                    android:textColorHint="@color/fg_shortcut"
+                    android:textSize="@dimen/symbol_size_normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/safe_asset_amount"
+                    android:textColor="@color/fg_less_significant"
+                    android:textSize="@dimen/symbol_size_normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="*"
+                    android:textColor="@color/vivid_red" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="@dimen/tip_edit_padding_top">
+
+                <EditText
+                    android:id="@+id/et_total_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2.5"
+                    android:background="@drawable/rect_corner_bg"
+                    android:hint="@string/safe_hint_max_issue"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:padding="6dp"
+                    android:textColor="@color/fg_less_significant"
+                    android:textSize="@dimen/symbol_size_normal" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/safe_first_issue_amount"
+                    android:textColor="@color/fg_less_significant"
+                    android:textSize="@dimen/symbol_size_normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="*"
+                    android:textColor="@color/vivid_red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="@dimen/tip_edit_padding_top">
+
+                <EditText
+                    android:id="@+id/et_first_issue_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2.5"
+                    android:background="@drawable/rect_corner_bg"
+                    android:hint="@string/safe_hint_fisrt_amount"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal"
+                    android:padding="6dp"
+                    android:textColor="@color/fg_less_significant"
+                    android:textSize="@dimen/symbol_size_normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/safe_decimal"
+                    android:textColor="@color/fg_less_significant"
+                    android:textSize="@dimen/symbol_size_normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="*"
+                    android:textColor="@color/vivid_red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="@dimen/tip_edit_padding_top">
+
+                <EditText
+                    android:id="@+id/et_decimals"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2.5"
+                    android:background="@drawable/rect_corner_bg"
+                    android:digits="1234567890"
+                    android:hint="@string/safe_hint_decimals"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:padding="6dp"
+                    android:textColor="@color/fg_less_significant"
+                    android:textSize="@dimen/symbol_size_normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/safe_asset_desc"
+                    android:textColor="@color/fg_less_significant"
+                    android:textSize="@dimen/symbol_size_normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="*"
+                    android:textColor="@color/vivid_red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="@dimen/tip_edit_padding_top">
+
+                <de.schildbach.wallet.ui.ScrollEditText
+                    android:id="@+id/et_asset_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2.5"
+                    android:background="@drawable/rect_corner_bg"
+                    android:gravity="top|left"
+                    android:hint="@string/safe_hint_asset_desc"
+                    android:imeOptions="actionNext"
+                    android:lines="5"
+                    android:maxLength="300"
+                    android:minHeight="60dp"
+                    android:padding="6dp"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/fg_less_significant"
+                    android:textColorHint="@color/fg_shortcut"
+                    android:textSize="@dimen/symbol_size_normal" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:gravity="top|right"
+                android:text="@string/safe_remarks"
+                android:textColor="@color/fg_less_significant"
+                android:textSize="@dimen/symbol_size_normal" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="@dimen/tip_edit_padding_top">
+
+                <de.schildbach.wallet.ui.ScrollEditText
+                    android:id="@+id/et_remarks"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2.5"
+                    android:background="@drawable/rect_corner_bg"
+                    android:gravity="top|left"
+                    android:hint="@string/safe_hint_remarks"
+                    android:imeOptions="actionNext"
+                    android:lines="5"
+                    android:maxLength="500"
+                    android:minHeight="60dp"
+                    android:padding="6dp"
+                    android:scrollbars="vertical"
+                    android:textColor="@color/fg_less_significant"
+                    android:textColorHint="@color/fg_shortcut"
+                    android:textSize="@dimen/symbol_size_normal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:paddingBottom="6dp"
+                android:paddingTop="6dp">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/cb_can_destory"
+                    style="@style/My.Widget.CompoundButton.CheckBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/safe_can_destory"
+                    android:textColor="@color/fg_less_significant"
+                    android:textSize="@dimen/font_size_tiny" />
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/cb_pay_candy"
+                    style="@style/My.Widget.CompoundButton.CheckBox"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/safe_pay_candy"
+                    android:textColor="@color/fg_less_significant"
+                    android:textSize="@dimen/font_size_tiny" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_candy_expired"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="top|right"
+                            android:text="@string/safe_candy_expired"
+                            android:textColor="@color/fg_less_significant"
+                            android:textSize="@dimen/symbol_size_normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:text="*"
+                            android:textColor="@color/vivid_red" />
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/et_candy_expired"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="@dimen/tip_edit_padding_top"
+                        android:background="@drawable/rect_corner_bg"
+                        android:digits="123"
+                        android:hint="@string/safe_hint_candy_expired"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:padding="6dp"
+                        android:textColor="@color/fg_less_significant"
+                        android:textSize="@dimen/symbol_size_normal" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_candy_rate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:gravity="right"
+                    android:text="@string/safe_candy_rate"
+                    android:textColor="@color/fg_less_significant"
+                    android:textSize="@dimen/symbol_size_normal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_candy_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/fg_less_significant"
+                        android:textSize="@dimen/font_size_tiny" />
+
+                    <de.schildbach.wallet.seekbar.IndicatorSeekBar
+                        android:id="@+id/isb_candy_rate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:isb_max="100"
+                        app:isb_min="1"
+                        app:isb_progress="20"
+                        app:isb_show_indicator="false" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingRight="12dp"
+                        android:paddingTop="6dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/safe_thousand_milli"
+                            android:textColor="@color/fg_less_significant"
+                            android:textSize="@dimen/font_size_tiny" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="@string/safe_hundred_milli"
+                            android:textColor="@color/fg_less_significant"
+                            android:textSize="@dimen/font_size_tiny" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_issue"
+        style="@style/My.Primary.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:background="@drawable/button_blue_no_corners_selector"
+        android:text="@string/safe_issue" />
+
+</RelativeLayout>
